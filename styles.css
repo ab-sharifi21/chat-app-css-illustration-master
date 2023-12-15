@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+:root {
+    --PaleViolet: hsl(276, 100%, 81%);
+    --ModerateViolet: hsl(276, 55%, 52%);
+    --DesaturatedDarkViolet: hsl(271, 15%, 43%);
+    --GrayishBlue: hsl(206, 6%, 79%);
+    --VeryDarkDesaturatedViolet: hsl(271, 36%, 24%);
+    --DarkGrayishViolet: hsl(270, 7%, 64%);
+
+    /* Gradients */
+    --LightMagenta: hsl(293, 100%, 63%);
+    --LightViolet: hsl(264, 100%, 61%);
+
+    /* Secondary Colors */
+    --White: hsl(0, 0%, 100%);
+    --LightGrayishViolet: hsl(270, 20%, 96%);
+    --VeryDarkDesaturatedViolet: hsl(271, 36%, 24%);
+    --VeryLightMagenta: hsl(289, 100%, 72%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.left-gradient {
+    position: absolute;
+    background: linear-gradient(to top, var(--LightViolet), var(--LightMagenta));
+    width: 19rem;
+    height: 30rem;
+    border-radius: 0 0 90% 50%;
+    top: 0;
+    left: -7rem;
+    z-index: -1;
+}
+.container {
+    width: 85%;
+    max-width: 900px;
+    margin: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.mobile {
+    width: 16.9rem;
+    height: 31.0rem;
+    background-color: var(--LightGrayishViolet);
+	box-shadow: 5px 40px 85px #cfcfcf;
+    border: 7px solid var(--White);
+    border-radius: 1.5rem;
+}
+
+.mobile header {
+    color: var(--White);
+    background: linear-gradient(to right, var(--LightViolet), var(--LightMagenta));
+    border-radius: 1.5rem 1.5rem .7rem .7rem;
+    padding: 1.5rem 1.5rem 0.7rem;
+    margin-bottom: 0rem;
+    display: grid;
+    grid-template-columns: 2.9rem 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 0.8rem;
+    position: relative;
+}
+
+.mobile header .white-tube {
+    position: absolute;
+    width: 60%;
+    height: 1.5rem;
+    background-color: var(--White);
+    border-radius: 2.5rem;
+    top: -0.4rem;
+    right: 3rem;
+}
+
+.mobile header img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--White);
+    object-fit: cover;
+    grid-row: 1/3;
+    place-self: left;
+}
+
+.mobile header h2 {
+    font-size: 16px;
+}
+
+.mobile header p {
+    font-size: 13px;
+    opacity: 0.5;
+}
+
+.chat-content {
+    font-size: 11px;
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.message1, .message2 {
+    background-color: var(--GrayishBlue);
+    border-radius: 0.7rem 0.5rem;
+    padding: .3rem;
+    width: 72%;
+    margin-bottom: 0.5rem;
+}
+
+.message2 {
+    background-color: var(--White);
+    margin: 0;
+}
+
+.message2:last-of-type {
+    margin-bottom: 0.5rem;
+}
+
+.second-person-chat {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 0.6rem;
+}
+
+
+.chat-content img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.price-section {
+    background: linear-gradient(to right, var(--LightMagenta), var(--LightViolet));
+    padding: 0.5rem 0.6rem;
+    border-radius: 8px 8px 8px 4px;
+    margin-bottom: 0.5rem;
+    width: 80%;
+    color: var(--White);
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-section > div {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.price-section > div p, .circle {
+    opacity: 0.6;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border: 1.5px solid white;
+    border-radius: 50%;
+}
+
+.price {
+    font-weight: 700;
+}
+
+.mobile footer {
+    background-color: var(--White);
+    border-radius: 2rem;
+    padding: 0.8rem;
+    margin: 0 0.5rem;
+    position: relative;
+}
+
+.mobile footer p {
+    opacity: 0.5;
+    font-size: 12px;
+}
+
+.mobile footer div {
+    position: absolute;
+    background-color: black;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 50%;
+    right: 4px;
+    top: 4.5px;
+    font-size: 700;
+}
+
+.booking {
+    text-align: center;
+    opacity: 0.8;
+}
+
+.booking > h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+
+@media (min-width: 600px) {
+    body {
+        height: 100%;
+    }
+    .container {
+        margin: 3rem 0;
+        width: 80%;
+        flex-direction: row;
+        gap: 5rem;
+    }
+
+    .booking {
+        width: 55%;
+        text-align: left;
+    }
+
+    
+.left-gradient {
+    width: 24.5rem;
+    height: 35rem;
+    border-radius: 0 0 50% 40%;
+    top: 0;
+    left: -7rem;
+}
+
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 65%;
+    }
+
+    .left-gradient {
+        border-radius: 0 0 50% 30%;
+        left: -4rem;
+    }
+}
