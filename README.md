@@ -5,4 +5,4 @@
 ## Welcome! 👋
 Frontend Mentor chanllenge done with css grid.
 
-Check it out here! [Frontend Mentor - chat-app-css-illustration-master](https://testimonials-grid-section-ab.netlify.app/)
+Check it out here: [Frontend Mentor - chat-app-css-illustration-master](https://chat-app-css-illustration-master-ab21.netlify.app/)
